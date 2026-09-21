@@ -19,8 +19,8 @@ if "ans4_val" not in st.session_state:
 def reset_game():
     st.session_state.ans1_val = ""  # เคลียร์ค่าช่องข้อ 1
     st.session_state.ans2_val = ""  # เคลียร์ค่าช่องข้อ 2
-    st.session_state.ans1_val = ""  # เคลียร์ค่าช่องข้อ 3
-    st.session_state.ans1_val = ""  # เคลียร์ค่าช่องข้อ 4
+    st.session_state.ans3_val = ""  # เคลียร์ค่าช่องข้อ 3
+    st.session_state.ans4_val = ""  # เคลียร์ค่าช่องข้อ 4
     st.session_state.start = time.time()  # เริ่มเวลาใหม่
     st.session_state.is_ended = False  # ปิด Dialog
 
@@ -34,6 +34,8 @@ def show_result_dialog(ans1, ans2):
     score = 0
 
     u_ans1 = ans1.strip().lower()
+    u_ans2 = ans2.strip().lower()
+    u_ans2 = ans2.strip().lower()
     u_ans2 = ans2.strip().lower()
 
     # ตรวจข้อ 1
@@ -99,11 +101,11 @@ ans2 = st.text_input(
 )
 ans3 = st.text_input(
     "ข้อ 3: An `P _ a _ h` so delicious. 🍑",
-    value=st.session_state.ans1_val,
+    value=st.session_state.ans3_val,
 )
 ans4 = st.text_input(
     "ข้อ 4: I have `P _ n` . 🖊️",
-    value=st.session_state.ans1_val,
+    value=st.session_state.ans4_val,
 )
 
 # อัปเดตค่าล่าสุดเข้าตัวแปร
